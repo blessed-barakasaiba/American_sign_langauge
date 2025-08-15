@@ -1,7 +1,6 @@
 from django.urls import path
-from .views import ASLPredictionView, ASLLettersView
+from . import views
 
 urlpatterns = [
-    path('predict/', ASLPredictionView.as_view(), name='asl_predict'),
-    path('letters/', ASLLettersView.as_view(), name='asl_letters'),
+    path('predict_sign/', views.predict_sign, name='predict_sign'),
 ]
